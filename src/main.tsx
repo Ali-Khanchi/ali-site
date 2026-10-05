@@ -1,3 +1,5 @@
-if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
-    window.location.replace("/about");
+const path = window.location.pathname;
+if (path.endsWith("/") || path.endsWith("/index.html")) {
+    const basePath = path.substring(0, path.lastIndexOf("/"));
+    window.location.replace(`${basePath}/about.html`);
 }
