@@ -1,0 +1,12 @@
+services:
+    website:
+        build: .
+        restart: always
+        ports:
+            - "4000:80"
+
+    # watchtower:
+    #     image: containrrr/watchtower
+    #     volumes:
+    #         - /var/run/docker.sock:/var/run/docker.sock
+    #     command: --interval 300 --cleanup # Checks every 5 mins
