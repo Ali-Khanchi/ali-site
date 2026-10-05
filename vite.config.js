@@ -10,13 +10,10 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "index.html"),
-                about: resolve(__dirname, "about.html"),
-                print: resolve(__dirname, "print.html"),
+                about: resolve(__dirname, "about/index.html"),
+                print: resolve(__dirname, "print/index.html"),
                 notfound: resolve(__dirname, "404.html"),
             },
         },
-    },
-    server: {
-        host: true,
     },
 });
