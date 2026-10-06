@@ -14,8 +14,9 @@
         "@fontsource/geist-sans": "^5.2.5",
         "@fontsource/inter": "^5.2.8",
         "geist": "^1.7.0",
-        "react": "19.2.0",
-        "react-dom": "19.2.0",
+        "react": "^19.3.0",
+        "react-dom": "^19.3.0",
+        "react-router": "^8.4.0",
         "wouter": "^3.9.0"
     },
     "devDependencies": {

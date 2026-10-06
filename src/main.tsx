@@ -1,5 +1,10 @@
-const path = window.location.pathname;
-if (path.endsWith("/") || path.endsWith("/index.html")) {
-    const basePath = path.substring(0, path.lastIndexOf("/"));
-    window.location.replace(`${basePath}/about`);
-}
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App";
+
+createRoot(document.getElementById("root")!).render(
+    <StrictMode>
+        <App />
+    </StrictMode>
+);
