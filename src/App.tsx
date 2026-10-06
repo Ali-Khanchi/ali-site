@@ -3,8 +3,10 @@ import ShortTechCV from "./components/cv/ShortTechCV";
 import NotFound from "./NotFound";
 
 export default function App() {
+    const basename = import.meta.env.BASE_URL || "/";
+
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
             <Routes>
                 {/* Redirect root (/) to /about */}
                 <Route path="/" element={<Navigate to="/about" replace />} />
