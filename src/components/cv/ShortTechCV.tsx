@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useLocation } from "wouter";
 import TagBox, { TagOption } from "../TagBox";
-import { aisLearnMore, dfcLearnMore, rawiLearnMore, shababeekLearnMore } from "./info";
+import { aisLearnMore, dfcLearnMore, dkLearnMore, rawiLearnMore, shababeekLearnMore } from "./info";
 import { itemBody, linkStyle, Project } from "./util";
 
 const pageWrapper = "print-page-wrapper min-h-screen flex justify-center bg-neutral-100 py-8 px-4";
@@ -51,6 +51,7 @@ enum ProjectKey {
     AISedu,
     Scholarship,
     FM,
+    Sheraa,
 }
 
 const sectionKeyOptions: TagOption<SectionKey>[] = sectionKeys.map((key) => ({
@@ -368,11 +369,16 @@ const ShortTechCV: React.FC<ShortTechCVProps> = ({ isPrintPage = false }) => {
                                     "https://www.rug.nl/fse/education/sse/clt-new/clt/services/professional-development/pie4lunch/17-dec-24?lang=en"
                                 }
                                 meta={"Feb 2024 - Jul 2024"}
-                                body={`Developed a Kotlin client for the Docker Engine API to manage containers programmatically. Collaborated in a team using a test-driven development approach, including automated tests, CI/CD workflows, and a modular architecture with good design patterns.`}
-                                learnMore={undefined}
+                                body={`Developed a Kotlin client for the Docker Engine API to manage containers programmatically. Collaborated in a team using a test-driven development approach, including automated tests, CI/CD workflows, and a modular architecture with effective design patterns.`}
+                                learnMore={dkLearnMore}
                                 toggleProject={toggleProject}
                                 openProject={openProject}
                                 projectKey={ProjectKey.DL}
+                                images={[
+                                    "/docker-kotlin/example.png",
+                                    "/docker-kotlin/presentation.pdf",
+                                    "/docker-kotlin/poster.pdf",
+                                ]}
                             />
 
                             <Project
@@ -394,7 +400,23 @@ const ShortTechCV: React.FC<ShortTechCVProps> = ({ isPrintPage = false }) => {
                                 title={"Digital Menu System"}
                                 subtitle={"Al Rawi Book Cafe & Restaurant"}
                                 meta={"Jun 2019"}
-                                body={`Designed and implemented a custom digital menu system to replace printed menus. In addition, a book lookup for books at the cafe was provided for customers. Overall improved customer experience.`}
+                                images={[
+                                    "/alrawi/presentation.pdf",
+                                    "/alrawi/menu.png",
+                                    "/alrawi/drinks.png",
+                                    "/alrawi/item.png",
+                                    "/alrawi/edit.png",
+                                    "/alrawi/library.png",
+                                    "/alrawi/book.png",
+                                    "/alrawi/category.png",
+                                ]}
+                                body={
+                                    <p>
+                                        {
+                                            "Designed and implemented a custom digital menu system to replace printed menus. In addition, a book lookup for books at the cafe was provided for customers. Overall improved customer experience. "
+                                        }
+                                    </p>
+                                }
                                 learnMore={rawiLearnMore}
                                 toggleProject={toggleProject}
                                 openProject={openProject}
@@ -424,6 +446,7 @@ const ShortTechCV: React.FC<ShortTechCVProps> = ({ isPrintPage = false }) => {
                                 toggleProject={toggleProject}
                                 openProject={openProject}
                                 projectKey={ProjectKey.AIS}
+                                images={["/ais/input.png", "/ais/search.png", "/ais/list.png"]}
                             />
                         </>
                     )}
@@ -520,6 +543,14 @@ const ShortTechCV: React.FC<ShortTechCVProps> = ({ isPrintPage = false }) => {
                                 body={`Claris FileMaker is an application development platform. I
                                     undertook certification tests for FileMaker versions 17 & 18 and
                                     became a certified developer.`}
+                            />
+                            <Project
+                                hidden={!selectedProjects.includes(ProjectKey.Sheraa)}
+                                title={"Sheraa Startup Toolbox"}
+                                subtitle={"Sharjah Entrepreneurship Center"}
+                                link={"https://sheraa.ae/"}
+                                meta={"Jul 2019"}
+                                body={`Attended a hands-on event involving interactive workshops and the opportunity to network with early-stage founders looking to start their own startup.`}
                             />
                         </>
                     )}

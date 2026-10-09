@@ -1,3 +1,5 @@
+import { linkStyle } from "./util";
+
 export const lorem =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet commodo nunc. Curabitur tellus sem, iaculis ut dictum id, tempor at neque. Proin et metus felis. Nulla aliquet, neque sit amet mollis blandit, risus velit viverra justo, a accumsan turpis mi non tortor. Nulla tempor auctor venenatis. Etiam sollicitudin, libero sed volutpat pretium, metus sem dictum arcu, eget viverra nunc leo ut libero. Donec ut libero nisl. Phasellus faucibus, magna ut laoreet faucibus, est lacus facilisis nulla, vel dignissim lacus tortor eget nibh. Quisque condimentum molestie orci ac pulvinar. Aliquam in elementum metus, id elementum diam. Ut at aliquet neque. Phasellus sed ornare ex, et hendrerit nisi. Cras viverra, dui a faucibus porta, ex mi egestas est, et posuere justo ex nec augue. Interdum et malesuada fames ac ante ipsum primis in faucibus.";
 
@@ -57,15 +59,15 @@ export const aisLearnMore = (
         <h2 className={headerStyle}>CHALLENGE</h2>
         <p>
             Every day, parents drive to the school to pick up their children. A sticker is needed to
-            prove that a person is a guardian of an AIS student . The sticker includes the family
+            prove that a person is a guardian of an AIS student. The sticker includes the family
             code (a four-digit number) and the house colour (green, yellow, blue, red or white) of
             the student. The problem was that not every guardian had a sticker inside their car.
             <br />
             <br />
-            At the entrance, a teacher checked stickers. If a guardian didn't have a sticker, they had
-            to ask for the student's name and search for it in a large stack of papers containing
-            every student in AIS. With almost 1500 students, finding a specific student could be
-            difficult, and carrying the papers in the hot UAE weather was exhausting.
+            At the entrance, a teacher checked stickers. If a guardian didn't have a sticker, they
+            had to ask for the student's name and search for it in a large stack of papers
+            containing every student in AIS. With almost 1500 students, finding a specific student
+            could be difficult, and carrying the papers in the hot UAE weather was exhausting.
         </p>
 
         <h2 className={headerStyle}>SOLUTION</h2>
@@ -86,8 +88,10 @@ export const aisLearnMore = (
         <h2 className={headerStyle}>BENEFIT</h2>
         <p>
             Digitising the process removed the need to carry and search through a huge stack of
-            papers, which was inefficient. Guardians could pass through quicker, and the overall
-            pickup process became faster and easier, reducing traffic considerably.
+            papers, and was vastly more efficient. Guardians could pass through quicker, and the
+            overall pickup process became faster and easier, reducing traffic considerably. The
+            school administration furthermore contacted me the following academic year to update the
+            records on the application.
         </p>
     </>
 );
@@ -97,8 +101,8 @@ export const shababeekLearnMore = (
         <h2 className="font-bold">ABOUT</h2>
         <p>
             Shababeek is a beloved Lebanese restaurant, creating a true culinary destination for the
-            city in collaboration with owner HH Sheikha Bodour bint Sultan Al Qasimi and celebrity chef
-            Maroun Chedid.
+            city in collaboration with owner HH Sheikha Bodour bint Sultan Al Qasimi and celebrity
+            chef Maroun Chedid.
         </p>
 
         <h2 className={headerStyle}>CHALLENGE</h2>
@@ -176,6 +180,111 @@ export const rawiLearnMore = (
             age group for better results.
         </p>
 
+        <h2 className={headerStyle}>BENEFIT</h2>
+        <p>
+            The e-menu reduced paper wastage and also supported the book-selling business by making
+            it easy for customers to browse and find books that match their interests.
+        </p>
+    </>
+);
+
+export const dkLearnMore = (
+    <>
+        <h2 className="font-bold">ABOUT</h2>
+        <p>
+            Docker-Kotlin is a Software Development Kit made for Kotlin, with the aim of simplifying
+            interactions with the Docker Engine. The SDK uses auto generation tools for creating
+            boilerplate code to cover basic endpoints in build time, and also provides an extensive
+            feedback system by providing an extensive range of exceptions for the user. It takes
+            advantage of some Kotlin features like coroutines and named arguments to provide a fast
+            and simple library.
+        </p>
+
+        <h2 className={headerStyle}>CHALLENGE</h2>
+        <p>
+            Our client, Digital Lab, was previously using a different SDK by the name of{" "}
+            <a
+                href="https://github.com/docker-java/docker-java"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkStyle}
+            >
+                docker-java
+            </a>
+            , however they frequently came across issues with this SDK. Some of those issues arised
+            from them using a Java library in their predominantly Kotlin projects. They asked us to
+            build a similar SDK, but built in Kotlin, which aims to resolve the issues faced with
+            with docker-java.
+            <br />
+            <br />
+            Alongside writing code, tests, and documentation, as part of the university course we
+            also had to write two documents detailing the requirements and going through our system
+            design.
+        </p>
+
+        <h2 className={headerStyle}>SOLUTION</h2>
+        <p>
+            As a team of 4, we split tasks appropriately and followed a test-driven approach in
+            development. I took on the responsibility of being team lead, assigning tasks and
+            delegating responsibilities to my team. I ensured that while some of us were working on
+            the architecture and code, there would also be someone keeping our documents up to date.
+            <br />
+            <br />I personally spent a considerable amount of time researching how best to design
+            the system. There were various approaches, however I took care to see what docker-java
+            did right and what they didn't execute as well. One aspect of our system I was
+            particularly proud of was our use of{" "}
+            <a
+                href="https://github.com/OpenAPITools/openapi-generator"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkStyle}
+            >
+                openapi-generator
+            </a>{" "}
+            to auto-generate a lot of the repetitive code, as the Docker API we were building the
+            SDK for was quite large.
+            <br />
+            <br />
+            Overall we successfully covered the most commonly utilized endpoints, allowed for
+            asynchronous code execution, implemented desirable design patterns, detailed
+            documentation, and descriptive exception throwing. There was a lot to this project, more
+            of the details can be seen in the presentation we made for the course.
+        </p>
+
+        <h2 className={headerStyle}>USAGE</h2>
+        <p>
+            The SDK is used by importing the library, providing the URL to the docker engine, and
+            calling the desired commands to interact with the Docker daemon (
+            <a
+                href="/docker-kotlin/example.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkStyle}
+            >
+                EXAMPLE
+            </a>
+            ). All function usage leverages Kotlin's named arguments, a feature unavailable in Java,
+            to pass only specific values while leaving the others to take on the default value,
+            which we have defined for every endpoints' arguments.
+            <br />
+            <br />
+            We made sure that using the library was highly intuitive and simple, while still
+            corresponding to the Docker API. Thus, it should be self-evident what each function does
+            to a developer experienced with the Docker API.
+            <br />
+            <br />
+            Some of the features supported: creating/modifying containers and images, file upload
+            including .tar archives, HTTP connection hijacking to directly talk to the docker daemon
+            through stdin with output from stdout, asynchronous manipulation of docker daemon, an
+            extensive exception system propagating from the Docker daemon.
+            <br />
+            <br />
+            When any erros are faced with the Docker daemon, from as simple to a disconnection,
+            object not found, bad request, to as detailed as specifying that a container is stopped,
+            name conflict, etc. Exceptions are also organized in a neat heirarchy and are mapped to
+            respective HTTP error codes. In total around 50 exceptions were made to provide precise
+            error handling to the developer.
+        </p>
         <h2 className={headerStyle}>BENEFIT</h2>
         <p>
             The e-menu reduced paper wastage and also supported the book-selling business by making
